@@ -167,6 +167,9 @@
     <Reference Include="System.IO.Compression.FileSystem" />
     <Reference Include="System.Management" />
     <Reference Include="System.Net.Http" />
+    <Reference Include="netstandard">
+      <HintPath Condition="Exists('$(FrameworkPathOverride)\Facades\netstandard.dll')">$(FrameworkPathOverride)\Facades\netstandard.dll</HintPath>
+    </Reference>
     <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>Resources\System.Net.Http.Formatting.dll</HintPath>
@@ -709,6 +712,7 @@
     <Compile Include="Modules\Base\ModAnimation.vb" />
     <Compile Include="Modules\Base\MyBitmap.vb" />
     <Compile Include="Modules\ModMain.vb" />
+    <Compile Include="Modules\ModLinkClient.vb" />
     <Compile Include="Modules\Base\ModBase.vb" />
     <Compile Include="My Project\AssemblyInfo.vb">
       <SubType>Code</SubType>

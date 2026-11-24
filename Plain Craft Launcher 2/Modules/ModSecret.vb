@@ -15,7 +15,8 @@ Friend Module ModSecret
 
 #Region "网络鉴权"
 
-    Public Const RestrictMcDownload As Boolean = True
+    '恢复本分支的原版下载、整合包安装及其入口；保留现有的完整安装实现。
+    Public Const RestrictMcDownload As Boolean = False
     Friend Function SecretCdnSign(UrlWithMark As String) As String
         If Not UrlWithMark.EndsWithF("{CDN}") Then Return UrlWithMark
         Return UrlWithMark.Replace("{CDN}", "").Replace(" ", "%20")

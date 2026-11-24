@@ -1,0 +1,21 @@
+{
+  "Version": "2.99.0.1",
+  "Methods": {
+    "System.Void PCL.PageLinkMain::.ctor()": "5650AA21ACB74E47D166CE58E830F395B454ECE91D4B7F3C63AC4C01C439FE5B",
+    "System.Void PCL.PageLinkMain::Join()": "4BBDFDECE1B79120B606ABF93CBF068D84927A2C346498466EA81B1DAF5B4F46",
+    "System.Void PCL.PageLinkMain::Join(System.String)": "0A57A20774A2CE77A3462C3ECCC29CD8503301B2F630A978B28F7682604465BA",
+    "System.Void PCL.PageLinkMain::JoinInternal(System.String)": "8631460E2A00E899FCA74301409506282E089584EE80E5FAD87CFCBF9090A177",
+    "System.String PCL.PageLinkMain::ValidateCodeFormat(System.String)": "6A62A2A6E8636AC3CDC49BF71A51FDB87C3E6B3A2D1B3183FCF7BA2570070284",
+    "System.Boolean PCL.PageLinkMain::TryExit(System.Boolean,System.Boolean)": "C3C6E22C6178FB3CA72B62EDBF16B55158E78BE157B991FE3BBFE49B3E82704E",
+    "System.Void PCL.PageLaunchRight::.ctor()": "D401A11EA20D7B9340C1D2672742E69DD75F346C3F91878E58081B2A4D62BBE7",
+    "System.Void PCL.FormMain::EndProgram(System.Boolean)": "891EA11AE913104BC7DF53BBD4866F269EE228F0F5B072B4014B1DB75A13697C",
+    "System.Void PCL.FormMain::EndProgramForce(PCL.ModBase/ProcessReturnValues)": "AFC943D85C1CADED7986A14CFEE59FE09B8945F552ECA4404D8918E72AC50981",
+    "System.Void PCL.PageLinkMain::.cctor()": "E25E9AD828CF6F98037265D8B98DD3932803620CCAFEB1E79F9ED185DE449104"
+  },
+  "ExternalReferences": [
+    "System.Boolean PCL.PageLinkMain::TryExit(System.Boolean,System.Boolean)",
+    "System.Void PCL.PageLinkMain::.ctor()",
+    "System.Void PCL.PageLinkMain::Join()",
+    "System.Void PCL.PageLinkMain::Join(System.String)"
+  ]
+}

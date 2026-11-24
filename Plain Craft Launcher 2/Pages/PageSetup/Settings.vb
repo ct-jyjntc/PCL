@@ -35,7 +35,7 @@ Public Class Settings
         New Setting("SystemDebugDelay", False, Source:=Sources.Registry),
         New Setting("SystemDebugSkipCopy", False, Source:=Sources.Registry),
         New Setting("SystemSystemCache", "", Source:=Sources.Registry),
-        New Setting("SystemSystemUpdate", 0),
+        New Setting("SystemSystemUpdate", 3),
         New Setting("SystemSystemActivity", 0),
         New Setting("SystemSystemTelemetry", True, Source:=Sources.Registry),
         New Setting("CacheDrops", "", Source:=Sources.Registry),
@@ -154,6 +154,7 @@ Public Class Settings
         New Setting("UiMusicAuto", True),
         New Setting("UiHiddenPageDownload", False, OnChanged:=AddressOf PageSetupUI.HiddenRefresh),
         New Setting("UiHiddenPageLink", False, OnChanged:=AddressOf PageSetupUI.HiddenRefresh),
+        New Setting("LinkAlienEntryMigrated", False),
         New Setting("UiHiddenPageSetup", False, OnChanged:=AddressOf PageSetupUI.HiddenRefresh),
         New Setting("UiHiddenPageOther", False, OnChanged:=AddressOf PageSetupUI.HiddenRefresh),
         New Setting("UiHiddenFunctionSelect", False, OnChanged:=AddressOf PageSetupUI.HiddenRefresh),
@@ -315,7 +316,6 @@ Public Class Settings
         If Value IsNot Nothing Then Return Value
         '对部分设置强制赋值
         Static ForcedSettings As New Dictionary(Of String, Object) From {
-            {"UiHiddenPageLink", True},
             {"UiHiddenSetupLink", True}
         }
         Dim ForcedSetting As Object = Nothing

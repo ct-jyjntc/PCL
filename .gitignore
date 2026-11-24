@@ -342,3 +342,12 @@ ASALocalRun/
 healthchecksdb
 
 MaskFiles/
+/dist/
+
+# Local patch tooling build outputs
+/third_party/pcl2-patch/**/bin/
+/third_party/pcl2-patch/**/obj/
+
+# Third-party networking kernel with no verified redistribution license
+/PCL.Link/kernel/*.exe
+/PCL.Link/kernel/*.dll

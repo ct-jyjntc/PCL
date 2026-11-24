@@ -1,0 +1,50 @@
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />
+  <PropertyGroup>
+    <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
+    <Platform Condition="'$(Platform)' == ''">AnyCPU</Platform>
+    <ProjectGuid>{F5DC3604-CF0A-48B6-A36C-38843AC2DAC9}</ProjectGuid>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>PclLink.Ui</RootNamespace>
+    <AssemblyName>PCL.Link.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <MyType>Empty</MyType>
+    <OutputPath>bin\</OutputPath>
+    <IntermediateOutputPath>obj\Release\</IntermediateOutputPath>
+    <Optimize>true</Optimize>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <Deterministic>true</Deterministic>
+    <NoWarn>40000</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Plain Craft Launcher 2"><HintPath>$(PclReferencePath)</HintPath><Private>False</Private></Reference>
+    <Reference Include="MeloongCore"><HintPath>..\PCLCS\bin\MeloongCore.dll</HintPath><Private>False</Private></Reference>
+    <Reference Include="Newtonsoft.Json"><HintPath>..\Plain Craft Launcher 2\Resources\Newtonsoft.Json.dll</HintPath><Private>False</Private></Reference>
+    <Reference Include="System" /><Reference Include="System.Core" /><Reference Include="System.Xaml" />
+    <Reference Include="WindowsBase" /><Reference Include="PresentationCore" /><Reference Include="PresentationFramework" />
+    <Reference Include="netstandard"><HintPath Condition="Exists('$(FrameworkPathOverride)\Facades\netstandard.dll')">$(FrameworkPathOverride)\Facades\netstandard.dll</HintPath></Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="System" /><Import Include="System.Collections.Generic" /><Import Include="System.Linq" />
+    <Import Include="System.IO" /><Import Include="System.Text" /><Import Include="System.Threading" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Threading.Tasks" /><Import Include="System.Windows" /><Import Include="System.Windows.Controls" />
+    <Import Include="Newtonsoft.Json" /><Import Include="Newtonsoft.Json.Linq" />
+    <Import Include="PCL" /><Import Include="MeloongCore" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bridge.vb" />
+    <Compile Include="AssemblyInfo.vb" />
+    <Compile Include="obj\Adapter\LinkPage.xaml.vb"><DependentUpon>LinkPage.xaml</DependentUpon></Compile>
+    <Compile Include="obj\Adapter\LinkPage.bindings.vb" />
+    <Compile Include="..\Plain Craft Launcher 2\Modules\ModLinkClient.vb"><Link>ModLinkClient.vb</Link></Compile>
+    <EmbeddedResource Include="obj\Adapter\LinkPage.xaml"><LogicalName>PclLink.Ui.LinkPage.xaml</LogicalName></EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <Target Name="CheckOfficialReference" BeforeTargets="BeforeBuild">
+    <Error Condition="!Exists('$(PclReferencePath)')" Text="PclReferencePath must point to the supported official PCL EXE." />
+  </Target>
+</Project>
